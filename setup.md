@@ -16,4 +16,4 @@
 - `touch githooks/pre-commit` #in this case to run when you make a commit
 ### Connecting to the Hook
 - `git config core.hooksPath githooks`
--
+- `chmod +x ./githooks/pre-commit`
