@@ -1,10 +1,10 @@
 #!/bin/bash
 TMP=$(mktemp)
 pip freeze > "$TMP"
+
 if ! diff -q "$TMP" requirements.txt > /dev/null 2>&1; then
   mv "$TMP" requirements.txt
   git add requirements.txt
-  git commit -m "[Hook] Updated requirements"
 else
   rm "$TMP"
 fi
